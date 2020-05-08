@@ -1,0 +1,8 @@
+#optimized version
+from functools import lru_cache
+@lru_cache(maxsize=1000)
+def fibr(n):
+    if n==0 or n==1:
+        return n
+    else:
+        return fibr(n-1)+fibr(n-2)
